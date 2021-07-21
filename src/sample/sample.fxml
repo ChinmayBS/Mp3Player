@@ -5,16 +5,22 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="792.0" style="-fx-border-color: #f4a261; -fx-border-style: solid; -fx-border-width: 4px; -fx-background-color: #ddbea9;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="793.0" style="-fx-border-color: #f4a261; -fx-border-style: solid; -fx-border-width: 4px; -fx-background-color: #ddbea9;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ImageView fitHeight="239.0" fitWidth="226.0" layoutX="98.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="232.0" fitWidth="208.0" layoutX="495.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="songName" alignment="CENTER" layoutY="6.0" prefHeight="28.0" prefWidth="792.0" text="MP3 Player">
+      <ImageView fx:id="speaker1" fitHeight="239.0" fitWidth="226.0" layoutX="36.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="531.0" AnchorPane.topAnchor="161.0">
+         <image>
+            <Image url="@../img_1.png" />
+         </image></ImageView>
+      <ImageView fx:id="speaker2" fitHeight="226.0" fitWidth="226.0" layoutX="469.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img_1.png" />
+         </image></ImageView>
+      <Label fx:id="songLabel" alignment="CENTER" layoutY="6.0" prefHeight="28.0" prefWidth="792.0" text="MP3 Player">
          <font>
             <Font name="DejaVu Serif Condensed Bold" size="25.0" />
          </font>
@@ -46,6 +52,6 @@
             <Font name="DejaVu Serif Bold" size="13.0" />
          </font>
       </Button>
-      <Slider fx:id="volumeSlider" layoutX="567.0" layoutY="97.0" max="200.0" prefHeight="16.0" prefWidth="208.0" value="100.0" />
+      <Slider fx:id="volumeSlider" layoutX="567.0" layoutY="97.0" prefHeight="16.0" prefWidth="208.0" value="50.0" />
    </children>
 </AnchorPane>
